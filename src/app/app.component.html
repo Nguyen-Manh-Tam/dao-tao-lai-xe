@@ -1,4 +1,45 @@
-<div class="container-fluid">
+<!-- <div class="container-fluid"> -->
+<!-- <div class="header">
+	<div class="row align-items-center">
+		<div class="col-sm-2">
+			<a routerLink="" style="text-decoration: none;font-size: 18px;color: rgb(254, 255, 250);">
+				ĐÀO TẠO LÁI XE 268
+			</a>
+		</div>
+		<div class="col">
+			<a routerLink="">TRANG CHỦ</a>
+		</div>
+		<div class="col">
+			<a routerLink="/register">ĐĂNG KÝ</a>
+		</div>
+		<div class="col">
+			<button mat-button [matMenuTriggerFor]="menu">SA HÌNH</button>
+			<mat-menu #menu="matMenu">
+				<button mat-menu-item routerLink="/sat-figure-1">SA HÌNH 1</button>
+				<button mat-menu-item routerLink="/sat-figure-2">SA HÌNH 2</button>
+			</mat-menu>
+		</div>
+		<div class="col">
+			<a routerLink="/theory-test">THI THỬ LÝ THUYẾT</a>
+		</div>
+		<div class="col">
+			<a routerLink="/law-document">VĂN BẢN LUẬT</a>
+		</div>
+		<div class="col">
+			<a routerLink="/introduce">GIỚI THIỆU</a>
+		</div>
+	</div>
+</div>
+<div>
+	<router-outlet></router-outlet>
+</div>
+<div>
+	<app-footer></app-footer>
+</div> -->
+
+<!-- </div> -->
+
+<div class="page-container">
 	<div class="header">
 		<div class="row align-items-center">
 			<div class="col-sm-2">
@@ -30,10 +71,15 @@
 			</div>
 		</div>
 	</div>
-	<section>
-		<router-outlet></router-outlet>
+	<div class="body">
+		<div class="content-container">
+			<div class="content">
+				<router-outlet></router-outlet>
+			</div>
+		</div>
+		<div class="footer">
+			<app-footer></app-footer>
+		</div>
+	</div>
 
-
-	</section>
-	<app-footer style="margin-bottom: 0px;"></app-footer>
 </div>
