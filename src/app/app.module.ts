@@ -10,8 +10,9 @@ import { IntroduceComponent } from './components/introduce/introduce.component';
 import { LawDocumentComponent } from './components/law-document/law-document.component';
 import { RegisterComponent } from './components/register/register.component';
 import { TheoryTestComponent } from './components/theory-test/theory-test.component';
-import { SatFigure2Component } from './components/sat-figure-2/sat-figure-2.component';
-import { SatFigure1Component } from './components/sat-figure-1/sat-figure-1.component';
+import { SatFigureB2Component } from './components/sat-figure-b2/sat-figure-b2.component';
+import { SatFigureB1Component } from './components/sat-figure-b1/sat-figure-b1.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,14 +23,15 @@ import { SatFigure1Component } from './components/sat-figure-1/sat-figure-1.comp
     LawDocumentComponent,
     RegisterComponent,
     TheoryTestComponent,
-    SatFigure2Component,
-    SatFigure1Component
+    SatFigureB2Component,
+    SatFigureB1Component
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

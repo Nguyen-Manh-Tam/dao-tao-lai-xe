@@ -1,2 +1,13 @@
-<p>theory-test works!</p>
-<!-- <app-footer></app-footer> -->
+<div style="text-align: center; padding-top: 20px;">
+    <h2 style="font-size: 40px; color: blue;">
+        TẤT CẢ CÁC CÂU HỎI
+    </h2>
+
+    <p>Lựa Chọn Chủ Đề</p>
+    <input type="text" placeholder="Search for a street" [matAutocomplete]="auto" class="example-input">
+    <mat-autocomplete #auto="matAutocomplete">
+        <mat-option *ngFor="let street of filteredStreets" [value]="street">
+            {{street}}
+        </mat-option>
+    </mat-autocomplete>
+</div>

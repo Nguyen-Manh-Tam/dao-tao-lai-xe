@@ -1,2 +1,29 @@
-<p>register works!</p>
-<!-- <app-footer></app-footer> -->
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()" style="text-align: center; padding-top: 18px;">
+    <h2 style="font-size: 40px; color: blue;">
+        ĐĂNG KÝ THÔNG TIN
+    </h2>
+
+    <mat-form-field appearance="outline" style="width:40vw">
+        <input matInput placeholder="Họ và Tên" formControlName="name" name="name">
+        <mat-error *ngIf="!registerForm.value.name">Vui lòng nhập họ và tên</mat-error>
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="outline" style="width:40vw">
+        <input matInput placeholder="Số điện thoại" formControlName="phone" name="phone">
+        <mat-error *ngIf="!registerForm.value.phone">Vui lòng nhập số điện thoại</mat-error>
+    </mat-form-field>
+    <br>
+    <div>
+        <span style="padding-right: 380px;">Hạng muốn đăng ký</span>
+        <br>
+        <mat-checkbox class="example-margin" style="padding-right: 350px;">Hạng B1 (số tự động)</mat-checkbox>
+        <br>
+        <mat-checkbox class="example-margin" style="padding-right: 376px;">Hạng B2 (số sàn)</mat-checkbox>
+    </div>
+
+    <div style="padding: 10px 10px;">
+        <button mat-raised-button color="primary" style="width: 160px;" type="submit">
+            ĐĂNG KÝ
+        </button>
+    </div>
+</form>

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NgForm } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
 	selector: 'app-home',
@@ -7,16 +7,17 @@ import { NgForm } from '@angular/forms';
 	styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+	registerForm = new FormGroup({
+		name: new FormControl('', Validators.required),
+		phone: new FormControl('', Validators.required),
+	});
 
-	constructor() { }
+	constructor() {
+	}
 
 	ngOnInit(): void {
 	}
 
-	onSubmit(form: NgForm) {
-		if (form.valid) {
-		  console.log(form.value);
-		}
-	  }
-
+	onSubmit(): void {
+	}
 }
