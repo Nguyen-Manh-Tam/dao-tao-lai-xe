@@ -1,34 +1,47 @@
 <div class="page-container">
 	<div class="header">
-		<div class="row align-items-center">
-			<div class="col-sm-2">
-				<a routerLink="" style="text-decoration: none;font-size: 18px;color: rgb(254, 255, 250);">
+		<!-- <nav>
+			<a routerLink="">
+				ĐÀO TẠO LÁI XE 268
+			</a>
+
+			<a routerLink="">TRANG CHỦ</a>
+
+			<a routerLink="/register">ĐĂNG KÝ</a>
+
+			<button mat-button [matMenuTriggerFor]="menu">SA HÌNH</button>
+			<mat-menu #menu="matMenu">
+				<button mat-menu-item routerLink="/sat-figure-b1">SA HÌNH B1</button>
+				<button mat-menu-item routerLink="/sat-figure-b2">SA HÌNH B2</button>
+			</mat-menu>
+
+			<a routerLink="/theory-test">THI THỬ LÝ THUYẾT</a>
+
+			<a routerLink="/law-document">VĂN BẢN LUẬT</a>
+
+			<a routerLink="/introduce">GIỚI THIỆU</a>
+		</nav> -->
+
+		<mat-toolbar color="primary">
+			<mat-toolbar-row>
+				<a routerLink="">
 					ĐÀO TẠO LÁI XE 268
 				</a>
-			</div>
-			<div class="col">
-				<a routerLink="">TRANG CHỦ</a>
-			</div>
-			<div class="col">
-				<a routerLink="/register">ĐĂNG KÝ</a>
-			</div>
-			<div class="col">
-				<button mat-button [matMenuTriggerFor]="menu">SA HÌNH</button>
-				<mat-menu #menu="matMenu">
-					<button mat-menu-item routerLink="/sat-figure-b1">SA HÌNH B1</button>
-					<button mat-menu-item routerLink="/sat-figure-b2">SA HÌNH B2</button>
-				</mat-menu>
-			</div>
-			<div class="col">
-				<a routerLink="/theory-test">THI THỬ LÝ THUYẾT</a>
-			</div>
-			<div class="col">
-				<a routerLink="/law-document">VĂN BẢN LUẬT</a>
-			</div>
-			<div class="col">
-				<a routerLink="/introduce">GIỚI THIỆU</a>
-			</div>
-		</div>
+				<span class="menu-spacer"></span>
+				<div fxShow="true" fxHide.lt-md>
+					<a routerLink="" mat-button>TRANG CHỦ</a>
+					<a routerLink="/register" mat-button>ĐĂNG KÝ</a>
+					<button mat-button [matMenuTriggerFor]="menu">SA HÌNH</button>
+					<mat-menu #menu="matMenu">
+						<button mat-menu-item routerLink="/sat-figure-b1">SA HÌNH B1</button>
+						<button mat-menu-item routerLink="/sat-figure-b2">SA HÌNH B2</button>
+					</mat-menu>
+					<a routerLink="/theory-test" mat-button>THI THỬ LÝ THUYẾT</a>
+					<a routerLink="/law-document" mat-button>VĂN BẢN LUẬT</a>
+					<a routerLink="/introduce" mat-button>GIỚI THIỆU</a>
+				</div>
+			</mat-toolbar-row>
+		</mat-toolbar>
 	</div>
 	<div class="body">
 		<div class="content-container">
@@ -38,5 +51,4 @@
 			<app-footer></app-footer>
 		</div>
 	</div>
-
 </div>

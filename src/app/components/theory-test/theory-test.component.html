@@ -1,13 +1,24 @@
-<div style="text-align: center; padding-top: 20px;">
+<div style="text-align: center; padding-top: 20px;" *ngIf="!isHide">
+    <h2 style="font-size: 40px; color: blue;">
+        THI THỬ LÝ THUYẾT
+    </h2>
+
+    <button mat-raised-button color="primary" style="width: 180px;" (click)="clickQuestion()">TẤT CẢ CÁC CÂU
+        HỎI</button><br><br>
+    <button mat-raised-button color="primary" style="width: 180px;">ĐỀ THI THỬ</button>
+</div>
+<div style="text-align: center; padding-top: 20px;" *ngIf="isHide">
     <h2 style="font-size: 40px; color: blue;">
         TẤT CẢ CÁC CÂU HỎI
     </h2>
 
-    <p>Lựa Chọn Chủ Đề</p>
-    <input type="text" placeholder="Search for a street" [matAutocomplete]="auto" class="example-input">
-    <mat-autocomplete #auto="matAutocomplete">
-        <mat-option *ngFor="let street of filteredStreets" [value]="street">
-            {{street}}
-        </mat-option>
-    </mat-autocomplete>
+    <div>
+        <p>Lựa Chọn Chủ Đề</p>
+        <input type="text" placeholder="Search for a street" [matAutocomplete]="auto" class="example-input">
+        <mat-autocomplete #auto="matAutocomplete">
+            <mat-option *ngFor="let street of filteredStreets" [value]="street">
+                {{street}}
+            </mat-option>
+        </mat-autocomplete>
+    </div>
 </div>

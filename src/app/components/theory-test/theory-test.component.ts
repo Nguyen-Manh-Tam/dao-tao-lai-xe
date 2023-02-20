@@ -7,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TheoryTestComponent implements OnInit {
 	filteredStreets: string[] = ['Champs-Élysées', 'Lombard Street', 'Abbey Road', 'Fifth Avenue'];
+	isHide: boolean = false;
 
 	constructor() { }
 
 	ngOnInit(): void {
+	}
+
+	clickQuestion() {
+		this.isHide = true;
 	}
 
 }

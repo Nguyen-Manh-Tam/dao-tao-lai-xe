@@ -1,7 +1,20 @@
 .footer {
-    flex-shrink: 0;
-    flex-grow: 0;
     background: #eee;
     padding: 12px 12px;
     background: #29aaea;
+}
+
+.container-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-left: -1rem;
+    flex-flow: row wrap;
+}
+
+.footer-item {
+    flex: 1 0;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    text-align: center;
 }
