@@ -6,8 +6,9 @@ import { Component, OnInit } from '@angular/core';
 	styleUrls: ['./theory-test.component.css']
 })
 export class TheoryTestComponent implements OnInit {
-	filteredStreets: string[] = ['Champs-Élysées', 'Lombard Street', 'Abbey Road', 'Fifth Avenue'];
+	filteredStreets: string[] = ['Khái Niệm', 'Quy Tắc Giao Thông', 'Nghiệp Vụ Vận Tải', 'Tốc Độ Khoảng Cách', 'Văn Hóa Giáo Dục', 'Kỹ Thuật Lái Xe', 'Cấu Tạo Sửa Chữa', 'Biển Báo'];
 	isHide: boolean = false;
+	// street: string = 'Khái Niệm';
 
 	constructor() { }
 
