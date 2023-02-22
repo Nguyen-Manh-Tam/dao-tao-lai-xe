@@ -1,13 +1,13 @@
-<div style="text-align: center; padding-top: 20px;" *ngIf="!isHide">
+<div style="text-align: center; padding-top: 20px;" *ngIf="!isHide && !isUse">
     <h2 style="font-size: 40px; color: blue;">
         THI THỬ LÝ THUYẾT
     </h2>
 
     <button mat-raised-button color="primary" style="width: 180px;" (click)="clickQuestion()">TẤT CẢ CÁC CÂU
         HỎI</button><br><br>
-    <button mat-raised-button color="primary" style="width: 180px;">ĐỀ THI THỬ</button>
+    <button mat-raised-button color="primary" style="width: 180px;" (click)="clickMockTest()">ĐỀ THI THỬ</button>
 </div>
-<div style="text-align: center; padding-top: 20px;" *ngIf="isHide">
+<div style="text-align: center; padding-top: 20px;" *ngIf="isHide && !isUse">
     <h2 style="font-size: 40px; color: blue;">
         TẤT CẢ CÁC CÂU HỎI
     </h2>
@@ -16,11 +16,40 @@
         <p style="padding-right: 10px; margin-top: 10px;">Lựa Chọn Chủ Đề</p>
         <input type="text" placeholder="" [matAutocomplete]="auto" class="example-input">
         <mat-autocomplete #auto="matAutocomplete">
-            <mat-option *ngFor="let street of filteredStreets" [value]="street">
+            <mat-option *ngFor="let street of filteredStreets" [value]="street" (ngModelChange)="changeOption($event)">
                 {{street}}
             </mat-option>
         </mat-autocomplete>
     </div>
     <br><br>
     <b style="font-size: 20px;">Chưa Có Câu Hỏi Trong Chủ Đề</b>
+</div>
+
+<div style="text-align: center; padding-top: 20px;" *ngIf="isUse">
+    <h2 style="font-size: 40px; color: blue;">
+        ĐỀ THI THỬ
+    </h2>
+
+    <button mat-raised-button color="primary" (click)="clickStart()">Bắt Đầu</button>
+</div>
+
+<div style="padding-top: 20px;" *ngIf="isUse">
+    <p style="margin-left: 32%;">
+        Dựa theo cấu trúc đề thi lý thuyết B2 chính thức thì mỗi đề thi sát hạch lý thuyết B2 sẽ bao gồm: <br>
+        1 câu hỏi phần khái niệm <br>
+        7 câu hỏi về quy tắc giao thông <br>
+        1 câu hỏi nghiệp vụ vận tải <br>
+        1 câu về tốc độ khoảng cách <br>
+        1 câu hỏi về văn hóa và đạo đức người lái xe <br>
+        2 câu hỏi về kỹ thuật lái xe <br>
+        1 câu hỏi về cấu tạo sữa chữa <br>
+        10 câu hỏi biển báo <br>
+        10 câu hỏi sa hình kèm theo 1 câu hỏi điểm liệt (tình huống gây mất an toàn giao thông nghiêm trọng). <br>
+        <b>Học viên ôn tập cần đáp án ứng yêu cầu sau:</b><br>
+    </p>
+    <ul style="margin-left: 32%;">
+        <li>Số câu hỏi phải đúng: <b style="color: red;">32/35 câu trở lên là đậu.</b></li>
+        <li>Thời gian làm đề thi: <b style="color: red;">22 phút.</b></li>
+        <li>Yêu cầu đặc biệt: <b style="color: red;">KHÔNG LÀM SAI CÂU ĐIỂM LIỆT (câu hỏi *)</b></li>
+    </ul>
 </div>

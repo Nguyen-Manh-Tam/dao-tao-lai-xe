@@ -18,3 +18,7 @@
     padding: 1rem;
     text-align: center;
 }
+
+::ng-deep .mat-form-field-underline {
+    display: none;
+}
